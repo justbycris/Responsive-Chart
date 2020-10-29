@@ -164,7 +164,7 @@ small {
 .headshot {
     width: 90px;
     position: relative;
-    bottom: 7px;
+    bottom: 5px;
     text-align: center;
     z-index: 10;
 }
