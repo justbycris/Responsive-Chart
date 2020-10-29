@@ -197,13 +197,3 @@ small {
         margin-right: 25px;
     }
 }
-
-@media only screen and (min-width: 750x) and (max-width:1050px) {
-    .content {
-        margin: -90px auto 0 auto;
-        width: 60%;
-    }
-    header {
-        width: 100vw;
-    }
-}
