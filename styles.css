@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
     font-family: 'Open Sans', sans-serif;
-    background-color: #000;
+    background-color: lightgray;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -13,25 +13,61 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
+    flex-flow: row nowrap;
+    background-color: lightgray;
+    box-sizing: border-box;
+    margin: 80px auto;
+    width: 800px;
+    text-align: center;
 }
 
 header {
     width: 100vw;
-    background-color: #fff;
+    background-color: #000;
     position: relative;
-    height: 100px;
-    top: -25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
-h1 {
-    font-family: 'Gentium Book Basic', serif;
-    color: #1e1e1e;
-    font-size: 40px;
-    text-align: center;
-    line-height: 100px;
+.header-logo {
+    height: 100px;
+    width: auto;
+    margin: 0 auto;
 }
+
+.info {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: -20px auto 40px auto;
+}
+
+h2 {
+    font-family: 'Gentium Basic', serif;
+    font-size: calc(20px + 1vw);
+    color: #000;
+    margin-bottom: 0;
+}
+
+small {
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+}
+
+
+/*h1 {
+    font-family: 'Gentium Basic';
+    font-style: normal;
+    font-weight: 700;
+    color: #fff;
+    font-size: calc(40px + 1vw);
+    font-display: swap;
+    src: local('Gentium Basic Bold'), local('GentiumBasic-Bold'), url(https://fonts.gstatic.com/s/gentiumbasic/v12/WnzgHAw9aB_JD2VGQVR80We3JLasnTMebaiLbBR2kw.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+} */
 
 .chart {
     width: 100%;
@@ -41,21 +77,21 @@ h1 {
 }
 
 .numbers {
-    color: #fff;
+    color: #000;
     margin: 0;
-    padding: 0;
     width: 50px;
     height: 100%;
     display: inline-block;
     text-align: center;
+    padding: 0px 15px;
 }
 
 .numbers li {
     list-style: none;
     height: 150px;
     position: relative;
-    bottom: 145px;
-    font-family: 'Gentium Book Basic', serif;
+    bottom: 140px;
+    font-family: 'Gentium Basic', serif;
 }
 
 .numbers span {
@@ -63,14 +99,14 @@ h1 {
     font-weight: 600;
     position: absolute;
     bottom: 0;
-    right: 10px;
+    right: -10px;
 }
 
 .bars {
     color: #fff;
     font-size: 18px;
     font-weight: 600;
-    background: rgb(218, 218, 218);
+    background: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
     display: inline-block;
@@ -85,18 +121,19 @@ h1 {
     width: 100px;
     height: 300px;
     position: relative;
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Gentium Basic', serif;
 }
 
 .bars span {
     width: 100%;
     position: absolute;
-    bottom: -32px;
+    bottom: -28px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: #000000;
 }
 
 .bars .bar {
@@ -143,15 +180,40 @@ h1 {
 
 /*MEDIA QUERIES*/
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (min-width: 320px) and (max-width: 749px) {
+    .header-logo {
+        height: 70px;
+        margin: 0;
+    }
+    .content {
+        flex-direction: column;
+        width: 90%;
+        margin: 40px auto;
+    }
+}
+
+@media only screen and (min-width: 750x) and (max-width:1050px) {
+    .content {
+        margin: -90px auto 0 auto;
+        width: 100%;
+    }
+}
+
+
+/*@media only screen and (max-width: 1050px) {
     body {
         overflow: hidden;
         width: 100vw;
     }
     .content {
-        height: 50%;
+        height: ;
     }
-    .header {
+    header {
         width: 100vw;
+        text-align: center;
     }
-}
+    .header-logo {
+        height: 80px;
+        margin: 0 auto;
+    }
+} */
