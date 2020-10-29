@@ -188,7 +188,12 @@ small {
     .content {
         flex-direction: column;
         width: 90%;
-        margin: 40px auto;
+        margin: 30px auto;
+        justify-content: center;
+    }
+    .chart {
+        width: 100%;
+        margin-right: 25px;
     }
 }
 
@@ -201,22 +206,3 @@ small {
         width: 100vw;
     }
 }
-
-
-/*@media only screen and (max-width: 1050px) {
-    body {
-        overflow: hidden;
-        width: 100vw;
-    }
-    .content {
-        height: ;
-    }
-    header {
-        width: 100vw;
-        text-align: center;
-    }
-    .header-logo {
-        height: 80px;
-        margin: 0 auto;
-    }
-} */
